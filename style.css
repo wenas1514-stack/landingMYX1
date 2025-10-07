@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+body {
+  overflow-x: hidden;
+    background-color: #0A080C; /* основной цвет */
+    color: #FFFFFF;
+    margin: 0; /* чтобы не было отступов по умолчанию */
+}
+
+.top-background {
+  width: 100%;
+  height: 539px;
+  position: relative;
+  background:
+    url("/img/Background2.png") no-repeat top center,
+    url("/img/Pattern.png") no-repeat top center;
+  background-size: cover, cover;
+  z-index: 0; /* важно — чтобы не перекрывать остальное */
+}
+
+/* отдельные монетки */
+.top-background .coin {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  will-change: transform;
+  pointer-events: none;
+  z-index: 1; /* монетки над фоном, но под остальным контентом */
+}
+
+/* glow */
+.top-background .glow {
+  background-image: url("/coins/glow.png");
+  top: 23%;
+  left: 10%;
+  width: 250px;
+  height: 250px;
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+/* монеты */
+.top-background .coin1 {
+  background-image: url("/coins/1.png");
+  top: 30%;
+  left: 14%;
+  width: 120px;
+  height: 120px;
+  animation: floatCoin1 6s ease-in-out infinite;
+}
+
+.top-background .coin2 {
+  background-image: url("/coins/2.png");
+  top: 85%;
+  left: 24%;
+  width: 120px;
+  height: 120px;
+  animation: floatCoin2 7s ease-in-out infinite;
+}
+
+.top-background .coin3 {
+  background-image: url("/coins/3.png");
+  top: 35%;
+  right: 16%;
+  width: 120px;
+  height: 120px;
+  animation: floatCoin3 6s ease-in-out infinite;
+}
+
+.top-background .coin4 {
+  background-image: url("/coins/4.png");
+  top: 60%;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  animation: floatCoin4 7s ease-in-out infinite;
+}
+
+/* анимации */
+@keyframes floatCoin1 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(5deg); }
+}
+
+@keyframes floatCoin2 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(8px) rotate(-5deg); }
+}
+
+@keyframes floatCoin3 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(6deg); }
+}
+
+@keyframes floatCoin4 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(10px) rotate(-6deg); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+
+
+
+.container {
+  max-width: 1150px;
+}
+
+.header .container {
+  padding: 39px 145px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.header .container img {
+  cursor: pointer;
+  transition: transform 0.25s ease; 
+}
+
+
+.header .container img:hover {
+  transform: scale(1.02); 
+}
+
+
+
+.main {
+display: flex;
+justify-content: center;
+
+}
+
+
+
+
+.timer .container {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 13px;
+
+}
+
+.timer3 {
+font-family: "Geist Mono", monospace;
+font-weight: 400;
+font-size: 20px;
+text-align: center;
+color: #b7f;
+border-radius: 9px;
+padding: 5px;
+width: 120px;
+height: 30px;
+background: #1b1422;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+
+.mainwelcome {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.maintext {
+ font-family: "Geist", sans-serif;
+font-weight: 600;
+font-size: 48px;
+text-align: center;
+color: #fff;
+margin: 0;
+}
+
+.undertext {
+ font-family: "Inter", sans-serif;
+font-weight: 400;
+font-size: 16px;
+text-align: center;
+color: #9a9a9a;
+margin: 0;
+padding-top: 18px;
+}
+
+.undertext span {
+  color: #be7dff;
+}
+
+.btn {
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  border-radius: 25px;
+  padding: 14px 40px; 
+  background: linear-gradient(205deg, #c776ff 0%, #7c49ff 100%);
+  display: inline-block;
+  margin-top: 40px;
+  transition: transform 1s ease, box-shadow 0.25s ease;
+}
+
+
+
+
+.welcome .container {
+  text-align: center; 
+  padding-top: 43px;
+  justify-content: center;
+  
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 6px rgba(199, 118, 255, 0.6),
+              0 0 10px rgba(124, 73, 255, 0.4);
+}
+
+
+
+.undertext1 {
+  width: 100%;              
+  margin-top: 40px;         
+
+}
+
+.welcome2 .container {
+ display: flex;            
+  justify-content: center;  
+  align-items: center;      
+  gap: 40px;  
+  padding-top: 110px;
+
+
+ 
+}
+
+.welcome2 {
+   display: flex;            
+  justify-content: center;  
+  align-items: center; 
+}
+
+.img {
+  background-image: url("imgunder/LOGO CoinMarketCap.svg");
+  width: 250px;
+  height: 73px;
+  display: inline-block;
+  transition: transform 0.1s ease, background-image 0.3s ease;
+  cursor: pointer;
+}
+
+.img:hover {
+  background-image: url("imgunder/LOGO CoinMarketCap2.svg");
+}
+
+.img:active {
+  transform: translateY(1px);
+}
+
+
+.img2 {
+  background-image: url("imgunder/LOGO MYX.svg");
+  width: 126px;
+  height: 25px;
+  display: inline-block;
+  transition: transform 0.1s ease, background-image 0.3s ease;
+  cursor: pointer;
+}
+
+.img2:hover {
+  background-image: url("imgunder/LOGO MYX2.svg");
+}
+
+.img2:active {
+  transform: translateY(1px);
+}
+
+
+.img3 {
+  background-image: url("imgunder/LOGO arbitrum.svg");
+  width: 170px;
+  height: 43px;
+  display: inline-block;
+  transition: transform 0.1s ease, background-image 0.3s ease;
+  cursor: pointer;
+}
+
+.img3:hover {
+  background-image: url("imgunder/LOGO arbitrum2.svg");
+}
+
+.img3:active {
+  transform: translateY(1px);
+}
+
+
+.img4 {
+  background-image: url("imgunder/LOGO The Block.svg");
+  width: 190px;
+  height: 38px;
+  display: inline-block;
+  transition: transform 0.1s ease, background-image 0.3s ease;
+  cursor: pointer;
+}
+
+.img4:hover {
+  background-image: url("imgunder/LOGO The Block2.svg");
+}
+
+.img4:active {
+  transform: translateY(1px);
+}
+
+
+
+.text {
+display: flex;
+justify-content: center;
+margin-top:  330px;
+}
+
+
+
+.learn {
+font-family: "Geist", sans-serif;
+font-weight: 600;
+font-size: 40px;
+text-align: center;
+color: #fff;
+}
+
+.learn span {
+  color: #ba74ff;
+}
+
+
+
+
+.info {
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+}
+
+.infomap {
+  border: 0.84px solid #18141c;
+  border-radius: 34px;
+  width: 1150px;
+  height: 325px;
+  
+  /* 👉 Добавляем фон */
+  background-image: url('/img/Total Airdrop Allocation.png');
+  background-repeat: no-repeat;
+  background-position: center; /* ставим по центру */
+  background-size: cover; /* или contain — в зависимости от того, как хочешь */
+
+}
+
+
+
+
+
+.wallet {
+display: flex;
+justify-content: center;
+margin-top: 9px;
+}
+
+.blank {
+  border: 0.84px solid #c183ff;
+  border-radius: 25px;
+  width: 1150px;
+  height: 240px;
+
+  background-image: 
+    url('/img/Group 55.png'),
+    linear-gradient(153deg, #b7f 0%, #9d3bff 100%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right center, center; 
+  background-size: auto, cover; 
+  background-position: calc(100% - 40px) center, center;
+
+}
+
+
+
+.blank .container {
+max-width: 445px;
+}
+
+.connect {
+font-family: "Inter", sans-serif;
+font-weight: 600;
+font-size: 24px;
+color: #fff;
+margin-left: 47px;
+margin-top: 44px;
+}
+
+.blablabla {
+font-family: "Inter", sans-serif;
+font-weight: 500;
+font-size: 16px;
+color: #fff;
+margin-left: 46px;
+margin-top: 21px;
+}
+
+.btn2 {
+text-decoration: none;
+font-family: "Inter", sans-serif;
+font-weight: 600;
+font-size: 16px;
+text-align: center;
+color: #a54aff;
+  border-radius: 25px;
+  padding: 14px 40px; 
+  background: linear-gradient(205deg, #d191ff 0%, #7c49ff 100%);
+  display: inline-block;
+  transition: transform 1s ease, box-shadow 0.25s ease;
+background: linear-gradient(180deg, #fff 0%, rgb(214, 173, 255) 100%);
+
+margin-left: 43px;
+
+}
+
+
+.btn2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 6px rgb(236, 209, 255),
+              0 0 10px rgba(195, 172, 255, 0.4);
+}
+
+
+
+.end {
+display: flex;
+justify-content: center;
+padding: 202px;
+padding-bottom: 0px;
+
+}
+
+.end .container {
+max-width: 599px;
+}
+
+.what {
+font-family: "ABeeZee", sans-serif;
+font-weight: 400;
+font-size: 24px;
+text-align: center;
+color: #fff;
+}
+
+.what2 {
+font-family: "Inter", sans-serif;
+font-weight: 400;
+font-size: 16px;
+text-align: center;
+color: #c3a9dd;
+}
+
+.what2 span {
+  color: #BB77FF;
+}
+
+
+.what span {
+  color: #b7f;
+}
+
+
+.end {
+  background-image: url('./img/Vector.png');
+  background-repeat: no-repeat;
+  background-position: center 120px;
+  background-size: auto;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.contaract {
+display: flex;
+justify-content: center;
+}
+
+.outcontract {
+padding-top: 93px;
+}
+
+
+.contracttext {
+font-family: "ABeeZee", sans-serif;
+font-weight: 400;
+font-size: 24px;
+text-align: center;
+color: #e2e2e2;
+}
+
+.contracttext span {
+  color: #808080;
+}
+
+.adress {
+border: 1px solid #131115;
+border-radius: 98px;
+width: 587px;
+height: 51px;
+  display: flex;
+  align-items: center; 
+  gap: 10px; 
+}
+
+.adress2 {
+font-family: "Inter", sans-serif;
+font-weight: 400;
+font-size: 16px;
+color: #757079;
+padding-left: 19px;
+}
+
+.copy1 {
+  width: 20px; 
+  height: 20px;
+  cursor: pointer; 
+  transition: opacity 0.2s ease;
+  padding-left: 119px;
+}
+
+
+.copy1:hover {
+  opacity: 0.7; 
+}
+
+
+
+
+
+.basement {
+max-width: 1300px;
+}
+
+.footer {
+display: flex;
+justify-content: space-between;
+padding-top: 156px;
+max-width: 1300px;
+align-items: center;
+margin: 0 auto;
+}
+
+.footer .rek {
+max-width: 78px;
+}
+
+
+
+.coimarketcapfooter img {
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.coimarketcapfooter:hover img {
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 5px rgba(0, 123, 255, 0.5));
+}
+
+
+.myxfooter {
+  background-image: url("img/footer.png");
+  width: 126px;
+  height: 25px;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.25s ease, filter 0.25s ease, background-image 0.25s ease;
+}
+
+.myxfooter:hover {
+  background-image: url("imgunder/LOGO MYX2.svg");
+  transform: scale(1.02);
+  filter: drop-shadow(0 0 1px #BA74FF);
+}

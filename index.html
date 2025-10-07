@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+   <div class="top-background">
+  <div class="coin glow"></div>
+  <div class="coin coin1"></div>
+  <div class="coin coin2"></div>
+  <div class="coin coin3"></div>
+  <div class="coin coin4"></div>
+  <div class="content">
+
+    <header class="header">
+        
+        <div class="container">
+         <img src="/img/LOGO.svg" alt="headerlogo1">
+         <a href="https://coinmarketcap.com/currencies/myx-finance/" 
+   class="headerlogo2" 
+   target="_blank" 
+   rel="noopener noreferrer">
+  <img src="/img/Claim Button.png" alt="">
+</a>
+
+    
+    </div>
+</header>
+
+<main class="main">
+    <div class="timer">
+        <div class="container">
+            <img src="/img/mainlogo.png" alt="" class="main">
+            <div class="timer3">09:00:00</div>
+        </div>
+    </div>
+</main>
+
+<script>
+
+    let countdown = 9 * 60 * 60;
+
+    function updateTimer() {
+        let hours = Math.floor(countdown / 3600);
+        let minutes = Math.floor((countdown % 3600) / 60);
+        let seconds = countdown % 60;
+
+       
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        document.querySelector(".timer3").textContent = `${hours}:${minutes}:${seconds}`;
+
+        if (countdown > 0) {
+            countdown--;
+        } else {
+            clearInterval(timerInterval);
+        }
+    }
+
+  
+    updateTimer();
+    let timerInterval = setInterval(updateTimer, 1000);
+</script>
+
+
+<mainwelcome class="mainwelcome">
+  <div class="welcome">
+    <div class="container">
+      <h1 class="maintext">MYX AIRDROP IS LIVE!</h1>
+      <h2 class="undertext">Claim Your <span>$MYX Reward</span> and be part of the next onchain perp Revolution</h2>
+      <a href="#" class="btn" id="claimBtn">CLAIM</a>
+    </div>
+  </div>
+</mainwelcome>
+
+<script src="script.js"></script>
+
+
+
+<undertext class="undertext1">
+    <div class="welcome2">
+        <div class="container">
+            <a href="" class="img"></a>
+            <a href="" class="img2"></a>
+            <a href="" class="img3"></a>
+            <a href="" class="img4"></a>
+        </div>
+    </div>
+</undertext>
+
+<text class="text">
+    <div class="container">
+        <h1 class="learn">Learn <span>About Our</span> Airdrop</h1>
+    </div>
+</text>
+
+<info class="info">
+  <div class="infomap">
+    <div class="container">
+      <!-- Здесь можешь оставить текст, кнопки и т.д. -->
+    </div>
+  </div>
+</info>
+
+
+<wallet class="wallet">
+    <div class="blank">
+        <div class="container">
+            <h1 class="connect">Wallet Connection</h1>
+            <h4 class="blablabla">Use a compatible wallet (e.g., MetaMask, Binance Web3 Wallet) and switch to the BNB Chain mainnet.</h4>
+            <a href="#" class="btn2" id="btn2">CLAIM</a>
+        </div>
+    </div>
+</wallet>
+
+
+<end class="end">
+    <div class="container">
+        <div class="fon"></div>
+        <h1 class="what">What is <span>MYX?</span></h1>
+        <h2 class="what2"><span>MYX</span> is an innovative crypto project building a unique ecosystem for trading, investing, and exchanging digital assets. Our token is designed to provide convenience for users and <span>long-term value</span>. By joining the airdrop, you get early access to our community and bonus rewards.</h2>
+    </div>
+</end>
+
+<contract class="contaract">
+    <div class="outcontract">
+        <div class="container">
+            <h1 class="contracttext"><span>Our</span> Contract</h1>
+            <div class="adress">
+                <h1 class="adress2">0xD82544bf0dfe8385eF8FA34D67e6e4940CC63e16</h1>
+                <img src="/img/copy-01.png" alt="" class="copy1">
+            </div>
+        </div>
+    </div>
+</contract>
+
+<basement class="basement">
+    <div class="footer">
+        <a href="#" class="myxfooter"></a>
+           <div class="rek">
+           <a href="#" class="x"><img src="/img/Twitter-X--Streamline-Bootstrap.svg" alt=""></a>
+           <a href="#" class="github"><img src="/img/github-mark 1.svg" alt=""></a>
+           <a href="#" class="discord"><img src="/img/discord-icon-svgrepo-com 1.svg" alt=""></a>
+        </div>
+        <a href="" class="coimarketcapfooter"><img src="/img/Claim Button.svg" alt=""></a>
+    </div>
+</basement>
+
+
+</body>
+</html>
+
